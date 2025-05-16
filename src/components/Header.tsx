@@ -41,6 +41,8 @@ export default function Header() {
             </Button>
             <Modal ref={customModal} className="modal">
               {/* <div className="upcoming-session"> */}
+
+              {bookings.length === 0 && <p>You don't have any bookings yet</p>}
               {bookings.map((session) => {
                 return (
                   <div key={session.session} className="upcoming-session">
